@@ -1,7 +1,17 @@
-import Message from './Message'
+import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './Components/Layout/MainLayout';
+import { HomePage } from './pages/home/HomePage';
 
 function App(){
-  return <div><Message/></div>
+  return <>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainLayout/>}>
+            <Route index element={<HomePage/>}/>
+          </Route>
+        </Routes>
+    </BrowserRouter>
+  </>
 }
 
 export default App;

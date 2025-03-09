@@ -1,12 +1,11 @@
-import * as React from 'react';
+import { Outlet } from 'react-router-dom';
 
-export interface IAppProps {
-}
-
-export function DashboardPageLayout (props: IAppProps) {
+const DashboardPageLayout = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+        <Outlet/>
+    </>
   );
 }
+
+export default DashboardPageLayout;

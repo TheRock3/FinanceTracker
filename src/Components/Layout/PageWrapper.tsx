@@ -1,12 +1,14 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
-type Props = {};
+type Props = {
+    state?: string,
+    children: ReactNode
+};
 
-const PageWrapper = (props: Props)=>{
-    return
-    <>
-        <div>PageWrapper</div>
-    </>
+const PageWrapper = (props: Props): ReactNode=>{
+    return(
+        <div>{props.children}</div>
+    )
 }
 
 export default PageWrapper;

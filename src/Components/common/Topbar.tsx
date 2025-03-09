@@ -1,5 +1,4 @@
 import { AppBar, Toolbar, Typography } from '@mui/material';
-import * as React from 'react';
 import SizeConfig from '../../configs/SizeConfig';
 import colorConfigs from '../../configs/ColorConfig';
 

@@ -1,7 +1,7 @@
 import { Box, Toolbar } from '@mui/material';
 import { Topbar } from '../common/Topbar';
 import SizeConfig from '../../configs/SizeConfig';
-import { Sidebar } from '../common/Sidebar';
+import Sidebar from '../common/Sidebar';
 import colorConfigs from '../../configs/ColorConfig';
 import { Outlet } from 'react-router-dom';
 

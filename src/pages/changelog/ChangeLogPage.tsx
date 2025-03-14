@@ -1,12 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 
-export interface IAppProps {
-}
+type Props = {};
 
-export function App (props: IAppProps) {
+const ChangelogPage = (props: Props) => {
   return (
-    <div>
-      
-    </div>
+    <div>ChangelogPage</div>
   );
-}
+};
+
+export default ChangelogPage;

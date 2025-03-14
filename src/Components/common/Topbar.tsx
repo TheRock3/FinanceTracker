@@ -1,26 +1,26 @@
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import SizeConfig from '../../configs/SizeConfig';
-import colorConfigs from '../../configs/ColorConfig';
+import { AppBar, Toolbar, Typography } from "@mui/material";
+import colorConfigs from "../../configs/colorConfigs";
+import sizeConfigs from "../../configs/sizeConfigs";
 
-export interface IAppProps {
-}
-
-export function Topbar (props: IAppProps) {
+const Topbar = () => {
   return (
-    <AppBar 
-      position='fixed'
+    <AppBar
+      position="fixed"
       sx={{
-        width: `calc(100% - ${SizeConfig.sidebar.width})`,
-        ml: SizeConfig.sidebar.width,
-        boxShadow: 'unset',
+        width: `calc(100% - ${sizeConfigs.sidebar.width})`,
+        ml: sizeConfigs.sidebar.width,
+        boxShadow: "unset",
         backgroundColor: colorConfigs.topbar.bg,
         color: colorConfigs.topbar.color
-      }}>
-        <Toolbar>
-          <Typography variant='h6'>
-            TopBar
-          </Typography>
-        </Toolbar>
+      }}
+    >
+      <Toolbar>
+        <Typography variant="h6">
+          React sidebar with dropdown
+        </Typography>
+      </Toolbar>
     </AppBar>
   );
-}
+};
+
+export default Topbar;

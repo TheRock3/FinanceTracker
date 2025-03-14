@@ -1,12 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 
-export interface IAppProps {
-}
+type Props = {};
 
-export function HomePage (props: IAppProps) {
+const HomePage = (props: Props) => {
   return (
-    <div>
-      HomePage
-    </div>
+    <div>HomePage</div>
   );
-}
+};
+
+export default HomePage;

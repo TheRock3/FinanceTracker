@@ -1,12 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 
-export interface IAppProps {
-}
+type Props = {};
 
-export function DashboardIndex (props: IAppProps) {
+const DashboardIndex = (props: Props) => {
   return (
-    <div>
-      DashboardIndex
-    </div>
+    <div>DashboardIndex</div>
   );
-}
+};
+
+export default DashboardIndex;

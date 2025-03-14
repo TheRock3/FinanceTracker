@@ -1,39 +1,36 @@
-import * as React from 'react';
-import { RouteType } from './config';
-import { Route } from 'react-router-dom';
-import PageWrapper from '../Components/Layout/PageWrapper';
-import appRoutes from './appRoutes';
+import { ReactNode } from "react";
+import { Route } from "react-router-dom";
+import PageWrapper from "../components/layout/PageWrapper";
+import appRoutes from "./appRoutes";
+import { RouteType } from "./config";
 
-export interface IAppProps {
-}
-
-const generateRoute = (routes: RouteType[]): React.ReactNode=> {
-  return routes.map((route, index)=>(
+const generateRoute = (routes: RouteType[]): ReactNode => {
+  return routes.map((route, index) => (
     route.index ? (
-        <Route
-        index={route.index}
+      <Route
+        index
         path={route.path}
-        element={
-            <PageWrapper state={route.state}>
-                {route.element}
-            </PageWrapper>
-        }
-        key={index}/>
-    ): (
-        <Route
-        index={route.index}
-        path={route.path}
-        element={
-            <PageWrapper state={route.state?? undefined}>
-                {route.element}
-            </PageWrapper>
-            }
+        element={<PageWrapper state={route.state}>
+          {route.element}
+        </PageWrapper>}
         key={index}
-        >
-            {route.child && generateRoute(route.child)}
-        </Route>
+      />
+    ) : (
+      <Route
+        path={route.path}
+        element={
+          <PageWrapper state={route.child ? undefined : route.state}>
+            {route.element}
+          </PageWrapper>
+        }
+        key={index}
+      >
+        {route.child && (
+          generateRoute(route.child)
+        )}
+      </Route>
     )
   ));
 };
 
-export const routes: React.ReactNode = generateRoute(appRoutes);
+export const routes: ReactNode = generateRoute(appRoutes);

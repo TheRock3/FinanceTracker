@@ -46,4 +46,3 @@ jobs:
         with:
           push: true
           tags: rakesh489/tracker:latest
-          tags: user/app:latest

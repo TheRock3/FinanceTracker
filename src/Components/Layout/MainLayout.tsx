@@ -5,7 +5,7 @@ import sizeConfigs from "../../configs/sizeConfigs";
 import Sidebar from "../common/Sidebar";
 import Topbar from "../common/Topbar";
 
-const MainLayout = () => {
+export const MainLayout = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <Topbar />
@@ -34,5 +34,3 @@ const MainLayout = () => {
     </Box>
   );
 };
-
-export default MainLayout;
